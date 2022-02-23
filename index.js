@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 app.get("/bicycle", (req, res) => {
   const bicycle = bicycles.find((b) => b.id === req.query.id);
-  return res.render("overview");
+  return res.render("overview", { bicycle });
 });
 
 app.listen(3000, () => console.log("Server running"));
