@@ -6,6 +6,9 @@ const bicycles = require("./data/data.json");
 //Template engine
 app.set("view engine", "ejs");
 
+//static files_directories
+app.use(express.static("public"));
+
 //Routes
 app.get("/", (req, res) => {
   return res.render("bicycles");
